@@ -1,0 +1,3 @@
+- Martin Fowler
+- Kent Beck
+- Robert C Martin

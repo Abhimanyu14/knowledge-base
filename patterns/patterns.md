@@ -1,0 +1,5 @@
+- Singleton
+- Factory
+- ViewHolder
+- Adapter
+- Builder
