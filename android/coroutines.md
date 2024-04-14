@@ -79,8 +79,13 @@ vs
 coroutineScope.cancel()
 ```
 
-###
+### To create a coroutine independent of the screen
 
-###
+[Coroutines & Patterns for work that shouldn’t be cancelled](https://medium.com/androiddevelopers/coroutines-patterns-for-work-that-shouldnt-be-cancelled-e26c40f142ad)
 
-###
+### Coroutines Best practices
+
+[Best practices for coroutines in Android](https://developer.android.com/kotlin/coroutines/coroutines-best-practices#coroutine-cancellable)
+
+[The Silent Killer That’s Crashing Your Coroutines](https://betterprogramming.pub/the-silent-killer-thats-crashing-your-coroutines-9171d1e8f79b)
+[Coroutines codegen](https://github.com/JetBrains/kotlin/blob/master/compiler/backend/src/org/jetbrains/kotlin/codegen/coroutines/coroutines-codegen.md)
