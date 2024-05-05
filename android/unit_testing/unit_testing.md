@@ -1,1 +1,3 @@
-[KotlinConf 2018 - Best Practices for Unit Testing in Kotlin by Philipp Hauer](https://www.youtube.com/watch?v=RX_g65J14H0)
+- [KotlinConf 2018 - Best Practices for Unit Testing in Kotlin by Philipp Hauer](https://www.youtube.com/watch?v=RX_g65J14H0)
+- [THE UNIT TESTING DIET: START WITH BDD AND DO NOT MOCK](https://www.droidcon.com/2023/11/15/put-your-tests-on-a-diettesting-the-behavior-and-not-the-implementation/)
+- [THE UNIT TESTING DIET: START WITH BDD AND DO NOT MOCK](https://www.droidcon.com/2023/04/06/the-unit-testing-diet-start-with-bdd-and-do-not-mock/)
