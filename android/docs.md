@@ -1,0 +1,1 @@
+- [Android Qquick Guides](https://developer.android.com/quick-guides)

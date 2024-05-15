@@ -7,14 +7,12 @@ Some of the core aspects for the basis of the conventions.
 
 1. Uniformity over use-case based decision.
 2. To reduce thinking as much as possible over debatable aspects.
-3.
 
 4. Always use named parameters when possible.
 5. Modifier should always be the first parameter in Composables
 6. Always use trailing commas
 7. Every file should end with a blank line
 8. M3 components should not be used directly
-9.
 
 ## Ordering
 

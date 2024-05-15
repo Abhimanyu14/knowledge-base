@@ -1,0 +1,2 @@
+- [Docs](https://developer.android.com/studio/preview/compose-screenshot-testing)
+- [Sample MR](https://github.com/android/testing-samples/pull/513/files#diff-4665d3bf7505eed9fc05545cf24b1e5e434c6ef30570b950a41e0b04698cb0ab)
