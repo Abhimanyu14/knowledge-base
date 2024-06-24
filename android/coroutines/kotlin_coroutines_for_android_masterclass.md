@@ -182,6 +182,8 @@ scope.coroutineContext.cancelChildren()
 
 ## Uncaught Exception in a Coroutine
 
+- Exception should be handled within the coroutine.
+
 ## CoorutineExceptionHandler
 
 ## SupervisorJob
