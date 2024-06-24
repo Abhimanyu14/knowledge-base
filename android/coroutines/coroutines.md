@@ -35,6 +35,7 @@
 
 - Delay
 - CoroutineScope
+- withContext
 
 # Other topics
 
@@ -45,6 +46,8 @@
 # suspendCancellableCoroutine
 
 - Same as `suspendCoroutine` with cancellation support.
+
+# suspendCoroutineUninterceptedOrReturn
 
 # Continuation
 

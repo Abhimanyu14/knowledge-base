@@ -94,8 +94,96 @@ scope.coroutineContext.cancelChildren()
 
 - `isActive`
 - Catch `CancellationException` to handle when a coroutine cancels. E.g. Clean up work.
-- `ensureActive()`
+- Special suspend functions like `delay()`, `withContext()`, etc check if the coroutine is active when starting the code execution and before returning the result, and hence they throw `CancellationException` if the coroutine is cancelled.
 
 ## The Importance of Cancellation Exception
 
+- `ensureActive()`
+- To throw `CancellationException` once the coroutine is cancelled.
+
 ## NonCancellable
+
+- `NonCancellable` - Special Job to ensure that a coroutine code is executed completely even if the coroutine is cancelled.
+
+# Coroutines Mechanics
+
+## CoroutineScope and CoroutineContext
+
+### CoroutineScope
+
+- Coroutine scope is a wrapper for a coroutine context. It is an interface containing a single property for the corotine context.
+
+- To access context
+
+  ```kotlin
+  this.coroutineContext
+  ```
+
+- To access the Job
+
+  ```kotlin
+  this.coroutineContext[Job]
+  ```
+
+### CoroutineContext
+
+- `EmptyCoroutineContext`
+
+## Coroutine Context Elements
+
+- `CoroutineName` - A name for a coroutine.
+- `CoroutineContext` can have an id, name, Job, Dispatcher, etc.
+
+### CoroutineDispatcher
+
+### Job
+
+## withContext Function
+
+- A suspend method that allows to change context, that internally uses `suspendCoroutineUninterceptedOrReturn()`.
+- This does not create a new coroutine.
+
+## Jobs Hierarchy
+
+- Every coorutine has a corresponding Job, but not every Job has a corresponding coroutine.
+  Example - `withContext` creates a new `Job` that does not have a corresponding coroutine.
+- Jobs have a hierarchy in a tree structure.
+
+## Cancellation propogration
+
+- When a Job is cancelled, all its children will also be cancelled unless the Job is a `SupervisorJob`.
+- CancellationException is not propogated outside the top level coroutine.
+- Cancellatin signal traverses down the job hierarchy and cancellation exception traverses up the job hierarchy.
+
+## NonCancellable vs Job
+
+- Both works functionally as expected.
+
+#### Recommendation
+
+- Use `NonCancellable` to be clear of the intention.
+
+# Parallel Decomposition
+
+## Shared Mutable State
+
+- Thread safe data structures
+- Thread confinement (newSingleThreadContext)
+- Mutual exclusion like mutex
+  ```kotlin
+  mutex.withLock {
+    // code
+  }
+  ```
+
+## Async Coroutine Builder
+
+# Exceptions Handling
+
+## Uncaught Exception in a Coroutine
+
+## CoorutineExceptionHandler
+
+## SupervisorJob
+
+## Uncaught Exception in Async Coroutine
